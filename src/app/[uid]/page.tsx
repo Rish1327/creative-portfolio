@@ -15,7 +15,7 @@ export default async function Page({ params }: { params: Params }) {
 
   return <SliceZone slices={page.data.slices} components={components} />;
 }
-
+let title="sas"
 export async function generateMetadata({
   params,
 }: {

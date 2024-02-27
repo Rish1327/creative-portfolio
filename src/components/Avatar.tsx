@@ -6,6 +6,8 @@ import { ImageField } from "@prismicio/client";
 import { PrismicNextImage } from "@prismicio/next";
 import clsx from "clsx";
 import usePrefersReducedMotion from "@/hooks/usePrefersReducedMotion";
+import Image from "next/image";
+
 
 export default function Avatar({
   image,
@@ -78,6 +80,14 @@ export default function Avatar({
         className="avatar aspect-square overflow-hidden rounded-3xl border-2 border-slate-700 opacity-0"
         style={{ perspective: "500px", perspectiveOrigin: "150% 150%" }}
       >
+        <Image
+          src="/image/ris.jpg"
+          className="avatar-image h-full w-full object-fill"
+          width={697}
+          height={697}
+          alt="caution icon"
+        />
+
         <PrismicNextImage
           field={image}
           className="avatar-image h-full w-full object-fill"

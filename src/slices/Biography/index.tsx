@@ -14,6 +14,9 @@ export type BiographyProps = SliceComponentProps<Content.BiographySlice>;
 /**
  * Component for "Biography" Slices.
  */
+let heading = "About Me"
+let body =
+  "Hey, I’m Rishabh! I grew up in Himachal and love all things creative. From the misty mountains to the serene valleys, my surroundings have always fueled my passion for design and coding. As a self-taught developer, I found my calling in blending artistic flair with technical skill. My journey has led me to specialize in front-end development, where I craft interactive experiences that are not just functional, but also visually stunning. ";
 const Biography = ({ slice }: BiographyProps): JSX.Element => {
   return (
     <Bounded
@@ -22,11 +25,12 @@ const Biography = ({ slice }: BiographyProps): JSX.Element => {
     >
       <div className="grid gap-x-8 gap-y-6 md:grid-cols-[2fr,1fr]">
         <Heading size="xl" className="col-start-1">
-          {slice.primary.heading}
+          {heading}
         </Heading>
 
         <div className="prose prose-xl prose-slate prose-invert col-start-1">
-          <PrismicRichText field={slice.primary.body} />
+          {/* <PrismicRichText field={slice.primary.body} /> */}
+          { body}
         </div>
         <Button
           linkField={slice.primary.button_link}
